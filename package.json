@@ -1,8 +1,8 @@
 {
-  "name": "cs260-vue-node-sql-twitter",
+  "name": "Pixy",
   "version": "1.0.0",
-  "description": "Twitter clone",
-  "author": "Daniel Zappala <daniel.zappala@gmail.com>",
+  "description": "Instagram",
+  "author": "Rachel Bengochea",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
