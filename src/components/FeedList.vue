@@ -49,6 +49,9 @@
 </script>
 
 <style scoped>
+img{
+  height:400px;
+}
  .item {
      border-bottom: 1px solid #ADADAD;
      padding: 10px;

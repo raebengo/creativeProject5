@@ -158,9 +158,11 @@ app.post('/api/users/:id/pics', verifyToken, upload.single('image'), (req, res) 
     return;
   }
   let path = ''
-  if(req.file){
-    path = req.file.path;
+  if(!req.file){
+    res.status(403).send("Please Upload a Photo.");
+    throw new Error('abort');
   }
+  path = req.file.path;
   knex('users').where('id',id).first().then(user => {
     return knex('pics').insert({user_id: id, pic:req.body.pic, created: new Date(), image:path});
   }).then(ids => {
